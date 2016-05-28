@@ -1,0 +1,577 @@
+/* NOTE: There isn't much to the OpenEMR website/wiki at the moment. Abstract out
+   this code later if there is non-trivial changes applied/code becomes hard to maintain. */
+
+/* ------------ */
+/* --- BASE --- */
+/* ------------ */
+body {
+  /* TODO: using inline style for this on the homepage because this is being
+     ignored for some reason. */
+  background: #f2f5f8;
+}
+
+/* --------------- */
+/* --- HELPERS --- */
+/* --------------- */
+.hide {
+  display: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.center-image {
+  margin: auto;
+  display: block;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.center-content-inside-column {
+  display: table;
+  margin: 0 auto;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* --------------------------- */
+/* --- MEDIAWIKI OVERRIDES --- */
+/* --------------------------- */
+#globalWrapper {
+  /* MinHeight = available height - min header - min carousel - min footer */
+  min-height: calc(100vh - 80px - 395px - 500px);
+}
+
+.container_webpage {
+  max-width: 1300px;
+  min-width: 350px;
+  width: 100%;
+  margin: auto;
+  border-left-color: #5A5A5A;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: black;
+  border-right-style: solid;
+  border-right-width: 1px;
+  background: #ffffff;
+}
+
+/* --------------------------- */
+/* --- BOOTSTRAP OVERRIDES --- */
+/* --------------------------- */
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+/* ----------------- */
+/* --- CONTAINER --- */
+/* ----------------- */
+.container-fluid {
+  padding: 0px;
+}
+
+@media (max-width: 797px) {
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/* set a max-width for horizontal fluid layout and make it centered */
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1300px;
+}
+
+/* -------------- */
+/* --- NAVBAR --- */
+/* -------------- */
+.navbar {
+  background: #ffffff;
+  border: none;
+  min-height: 80px;
+}
+
+.navbar .nav-text-link {
+  /* TODO: don't force override */
+  color: #505aa8 !important;
+  margin-top: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+}
+
+.navbar .nav-text-link.active-link {
+  color: #1bbc9b !important;
+}
+
+.navbar .navbar-header {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.navbar .navbar-right {
+  margin-right: -5px;
+  margin-top: 8px;
+}
+
+/* nice green border when site is tablet/mobile and carousel
+   cannot be shown */
+@media (max-width: 700px) {
+  .navbar {
+    padding-bottom: 15px;
+    border-bottom-color: #5cbd6c;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar .navbar-header {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1025px) {
+  .navbar .nav-text-link {
+    padding-right: 2px;
+  }
+}
+
+/* collapse sooner: http://stackoverflow.com/a/26433031/1525534 */
+@media (max-width: 800px) {
+  .navbar .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  .navbar .navbar-header .collapse, .navbar-toggle {
+    display: block !important;
+  }
+
+  .navbar .navbar-header {
+    float: none;
+  }
+}
+
+.navbar-toggle {
+  border-color: #DDDDDD;
+  margin-top: 17px;
+}
+
+/* -------------- */
+/* --- FOOTER --- */
+/* -------------- */
+.footer {
+  max-width: 1300px;
+  min-height: 500px;
+  background: #ECECEC;
+}
+
+/* TODO: there is an issue when on non-front page pages (e.x.: wiki)
+   the footer needs to be min-height: 112px for it to be the correct
+   height. */
+/* TODO: for some reason, the social bar icons aren't perfectly in the center */
+.footer .social-bar {
+  background: #75706c;
+  min-height: 100px;
+}
+
+@media (max-width: 500px) {
+  .footer .social-bar .center-content-inside-column {
+    display: block;
+    margin: auto;
+  }
+}
+
+.footer .social-bar ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 15px;
+}
+
+.footer .sitemap {
+  min-height: 550px;
+}
+
+.footer .sitemap .logo {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.footer .sitemap .links .title {
+  font-family: 'Montserrat', sans-serif;
+  color: #505aa8;
+}
+
+.footer .sitemap .links .project-links-column {
+  margin-left: 90px;
+}
+
+.footer .sitemap .links .project-links-column,
+.footer .sitemap .links .help-and-support-column,
+.footer .sitemap .links .developer-links-column {
+  min-width: 300px;
+}
+
+/* TODO: when the footer gets too thin, show collaposable top-level menus instead */
+@media (max-width: 1000px) {
+  .footer .sitemap .links .project-links-column,
+  .footer .sitemap .links .help-and-support-column,
+  .footer .sitemap .links .developer-links-column {
+    margin-left: 20px;
+  }
+
+  .footer .sitemap .logo > div > img {
+    margin: auto;
+    display: block;
+    padding: 0;
+  }
+
+  .footer .sitemap {
+    min-height: 1000px;
+  }
+}
+
+.footer .sitemap .links a {
+  color: #75706c;
+  font-size: 19px;
+  line-height: 30px;
+  text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.footer .sitemap .links a:hover,
+.footer .sitemap .links a:active {
+  color: #1bbc9b;
+  text-decoration: none;
+}
+
+/* ----------- */
+/* --- 404 --- */
+/* ----------- */
+.page-not-found {
+  min-height: 45vh;
+  padding: 15px;
+  text-align: center;
+}
+
+/* ---------------- */
+/* --- CAROUSEL --- */
+/* ---------------- */
+ .carousel {
+  margin-top: -20px;
+  width: 100%;
+  height: 395px;
+}
+
+@media (max-width: 700px) {
+  .carousel {
+    display: none;
+  }
+}
+
+.carousel .slide {
+  /* TODO: switch to "inherit" once tested on IE */
+  width: 100%;
+  height: 395px;
+  border-bottom-color: #5cbd6c;
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+}
+
+.carousel .slide.slide-0 {
+  background-image: url(/wiki/skins/openemr/images/slide-1.jpg);
+}
+
+.carousel .slide.slide-1 {
+  background: #23538a;
+  background-image: -ms-linear-gradient(top, #a7cfdf 0%, #23538a 100%);
+  background-image: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%);
+  background-image: -o-linear-gradient(top, #a7cfdf 0%, #23538a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #a7cfdf), color-stop(100, #23538a));
+  background-image: -webkit-linear-gradient(top, #a7cfdf 0%, #23538a 100%);
+  background-image: linear-gradient(to bottom, #a7cfdf 0%, #23538a 100%);
+}
+
+.carousel .slide.slide-1 .left {
+  float: left;
+  width: 70%;
+  padding-left: 50px;
+  padding-top: 30px;
+}
+
+.carousel .slide.slide-1 .left h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 33px;
+  color: #ffffff;
+}
+
+.carousel .slide.slide-1 .left p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.carousel .slide.slide-1 .left a,
+.carousel .slide.slide-1 .left a:active,
+.carousel .slide.slide-1 .left a:hover,
+.carousel .slide.slide-1 .left a:visited {
+  color: #dcdcdc !important;
+  text-decoration: underline;
+}
+
+.carousel .slide.slide-1 .right {
+  float: right;
+  width: 30%;
+  padding-right: 60px;
+  padding-top: 60px;
+}
+
+.carousel .slide.slide-1 .right img {
+  float: right;
+  height: 226px;
+}
+
+@media (max-width: 1200px) {
+  .carousel .slide.slide-1 .right {
+    display: none;
+  }
+
+  .carousel .slide.slide-1 .left {
+    width: 100%;
+    float: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .carousel .slide.slide-1 .right {
+    display: none;
+  }
+
+  .carousel .slide.slide-1 .left {
+    width: 100%;
+    float: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+}
+
+/* TODO: need to make this slide responsive. Don't use a picture */
+.carousel .slide.slide-2 {
+  background-image: url(/wiki/skins/openemr/images/notable-users-slide.jpg);
+}
+
+/* ------------ */
+/* --- HOME --- */
+/* ------------ */
+.home h1, .home h2, .home h3, .home p, .home a {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.home a, .home a:visited, .home a:hover, .home a:active {
+  color: #339ad6;
+}
+
+.home a img {
+  outline: none;
+}
+
+.home p {
+  font-size: 17px;
+}
+
+.home .about {
+  padding: 15px;
+}
+
+.home .about .row.about-logo {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+  .home .about .row.about-logo {
+    display: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.home .about .row.about-text {
+  color: #75706c;
+  font-size: 18px;
+  line-height: 27px;
+  padding-left: 45px;
+  padding-right: 45px;
+  text-align: justify;
+}
+
+@media (max-width: 993px) {
+  .home .about .row.about-text {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 400px) {
+  .home .about .row.about-text {
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 22px;
+  }
+}
+
+.home .main-points .non-profit-backing {
+  background: #339ad6;
+}
+
+.home .main-points .open-source {
+  background: #505aaB;
+}
+
+.home .main-points .certifications {
+  background: #1bbc9b;
+}
+
+.home .main-points .point {
+  height: 260px;
+}
+
+.home .main-points .point .title {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+.home .main-points .point .info {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #F2F2F2;
+  line-height: 25px;
+}
+
+@media (max-width: 1200px) {
+  .home .main-points .point {
+    height: 270px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .home .main-points .point {
+    height: 310px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .home .main-points .point {
+    width: 100%;
+    height: 160px;
+    padding: 5px;
+  }
+
+  .home .main-points .point .info {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .home .main-points .point {
+    width: 100%;
+    height: 200px;
+    padding: 5px;
+  }
+
+  .home .main-points .point .info {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home .main-points .point {
+    width: 100%;
+    height: 220px;
+    padding: 5px;
+  }
+
+  .home .main-points .point .info {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+  }
+}
+
+.home .features .title {
+  font-family: 'Montserrat', sans-serif;
+  color: #505aa8;
+  text-align: center;
+}
+
+.home .features .about-features {
+  color: #75706c;
+  font-size: 18px;
+  line-height: 27px;
+  padding-left: 45px;
+  padding-right: 45px;
+  text-align: justify;
+}
+
+.home .features .bullets {
+  margin-bottom: 30px;
+}
+
+.home .features .bullets .bullet a {
+  font-size: 22px;
+  line-height: 50px;
+  color: #339ad6 !important;
+}
+
+.home .features .bullets .bullet i {
+  font-size: 22px;
+  color: #75706c;
+}
+
+@media (max-width: 993px) {
+  .home .features .about-features {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 22px;
+  }
+
+  .home .features .bullets .center-content-inside-column {
+    display: block;
+    margin: auto;
+  }
+}

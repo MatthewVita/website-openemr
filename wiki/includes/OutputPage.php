@@ -983,7 +983,7 @@ class OutputPage {
 	}
 
 	/**
-	 * Add wikitext with a custom Title object and
+	 * Add wikitext with a custom Title object and 
 	 *
 	 * @param $text String: wikitext
 	 * @param $title Title object
@@ -1304,13 +1304,13 @@ class OutputPage {
 	 */
 	public function getXVO() {
 		$cvCookies = $this->getCacheVaryCookies();
-
+		
 		$cookiesOption = array();
 		foreach ( $cvCookies as $cookieName ) {
 			$cookiesOption[] = 'string-contains=' . $cookieName;
 		}
 		$this->addVaryHeader( 'Cookie', $cookiesOption );
-
+		
 		$headers = array();
 		foreach( $this->mVaryHeader as $header => $option ) {
 			$newheader = $header;
@@ -1319,7 +1319,7 @@ class OutputPage {
 			$headers[] = $newheader;
 		}
 		$xvo = 'X-Vary-Options: ' . implode( ',', $headers );
-
+		
 		return $xvo;
 	}
 
@@ -1349,11 +1349,11 @@ class OutputPage {
 	}
 
 	/**
-	 * Set a flag which will cause an X-Frame-Options header appropriate for
-	 * edit pages to be sent. The header value is controlled by
+	 * Set a flag which will cause an X-Frame-Options header appropriate for 
+	 * edit pages to be sent. The header value is controlled by 
 	 * $wgEditPageFrameOptions.
 	 *
-	 * This is the default for special pages. If you display a CSRF-protected
+	 * This is the default for special pages. If you display a CSRF-protected 
 	 * form on an ordinary view page, then you need to call this function.
 	 */
 	public function preventClickjacking( $enable = true ) {
@@ -1370,8 +1370,8 @@ class OutputPage {
 	}
 
 	/**
-	 * Get the X-Frame-Options header value (without the name part), or false
-	 * if there isn't one. This is used by Skin to determine whether to enable
+	 * Get the X-Frame-Options header value (without the name part), or false 
+	 * if there isn't one. This is used by Skin to determine whether to enable 
 	 * JavaScript frame-breaking, for clients that don't support X-Frame-Options.
 	 */
 	public function getFrameOptions() {
@@ -2628,7 +2628,7 @@ class OutputPage {
 
 	/**
 	 * Include jQuery core. Use this to avoid loading it multiple times
-	 * before we get a usable script loader.
+	 * before we get a usable script loader. 
 	 *
 	 * @param $modules Array: list of jQuery modules which should be loaded
 	 * @return Array: the list of modules which were not loaded.

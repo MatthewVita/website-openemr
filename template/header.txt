@@ -1,0 +1,46 @@
+<div class="titleblock">
+  <div style="float:right; margin:8px 0 0 0; padding:0 0 0 0;">
+   <table style="background-color:black;">
+    <tr>
+     <td>
+      <div style="margin:0 5px 0 0; padding:0 0 0 0;">
+       <a class="webpage" target="_blank" href="http://www.facebook.com/pages/OpenEMR/181315115284266"><img class="webpage" style="vertical-align:middle;border-style:none;" title="OpenEMR Facebook Page" alt="OpenEMR Facebook Page" src="/pics/FaceBook-icon.png"></a>
+       <a class="webpage" target="_blank" href="http://twitter.com/openemr"><img class="webpage" style="vertical-align:middle;border-style:none;" title="OpenEMR Twitter Page" alt="OpenEMR Twitter Page" src="/pics/Twitter-icon.png"></a>
+       <a class="webpage" target="_blank" href="https://plus.google.com/106799034872780958301"><img class="webpage" title="OpenEMR Google+ Page" alt="OpenEMR Google+ Page" src="https://ssl.gstatic.com/images/icons/gplus-32.png" width="32" height="32" style="vertical-align:middle;border-style:none;"/></a>
+       <a class="webpage" target="_blank" href="http://diasp.org/u/openemr"><img class="webpage" style="vertical-align:middle;border-style:none;" title="OpenEMR Diaspora Page" alt="OpenEMR Diaspora Page" src="/pics/diaspora_d_32.png"></a>
+      </div>
+     </td>
+     <td>
+      <div style="margin:0 5px 0 0; padding:0 0 0 0;">
+       <a class="webpage" href="/wiki/index.php/OpenEMR_Professional_Support"><img class="webpage" height="62" width="120" style="vertical-align:middle;border-style:none;" title="OpenEMR Professional Support" alt="OpenEMR Professional Support" src="/pics/Open-pro-support_small_blue.png"></a>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+</div>
+
+<div class="subbanner" style="height:2.5em;">
+  <div class="social_net_links_recommend" style="text-align:right;padding-top:.85em;overflow:visible;">
+    <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+    <script type="text/javascript">
+      document.write('<fb:like send="false" layout="button_count" show_faces="false" width="100"></fb:like>')
+    </script>
+    <g:plusone size="small" annotation="bubble"></g:plusone>
+  </div>
+  <div class="social_net_links_share" style="text-align:right;padding-top:.5em;">
+    <span  class='st_sharethis_button' displayText='ShareThis'></span>
+  </div>
+</div>
+
+<div class="webpage">
+<ul class="navbar">
+  <li><a href="/" id="homenav" class="nav">Home</a></li>
+  <li><a id="featuresnav" href="/wiki/index.php/OpenEMR_Features" class="nav">Features</a></li>
+  <li><a id="demonav" href="/wiki/index.php/OpenEMR_Demo" class="nav">Demo</a></li>
+  <li><a id="downloadnav" href="/wiki/index.php/OpenEMR_Downloads" class="nav">Download</a></li>
+  <li><a id="wikinav" href="/wiki/" class="nav">Wiki</a></li>
+  <li><a id="forumnav" target="_blank" href="http://sourceforge.net/p/openemr/discussion/" class="nav">Forum</a></li>
+  <li><a id="supportnav" href="/wiki/index.php/OpenEMR_Support_Guide" class="nav">Support</a></li>
+</ul>
+</div>

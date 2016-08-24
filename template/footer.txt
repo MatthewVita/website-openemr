@@ -1,0 +1,35 @@
+<div class="footer_webpage">
+<div class="right">
+<p class="webpage"><span style="color:black;">Follow OpenEMR:</span>
+<a class="webpage" target="_blank" href="http://www.facebook.com/pages/OpenEMR/181315115284266"><img class="webpage" style="vertical-align:middle;border-style:none;" title="OpenEMR Facebook Page" alt="OpenEMR Facebook Page" src="/pics/FaceBook-icon.png"></a>
+<a class="webpage" target="_blank" href="http://twitter.com/openemr"><img class="webpage" style="vertical-align:middle;border-style:none;" title="OpenEMR Twitter Page" alt="OpenEMR Twitter Page" src="/pics/Twitter-icon.png"></a>
+<a class="webpage" target="_blank" href="https://plus.google.com/106799034872780958301"><img class="webpage" title="OpenEMR Google+ Page" alt="OpenEMR Google+ Page" src="https://ssl.gstatic.com/images/icons/gplus-32.png" width="32" height="32" style="vertical-align:middle;border-style:none;"/></a>
+<a class="webpage" target="_blank" href="http://diasp.org/u/openemr"><img class="webpage" title="OpenEMR Diaspora Page" alt="OpenEMR Diaspora Page" src="/pics/diaspora_d_32.png" width="32" height="32" style="vertical-align:middle;border-style:none;"/></a>
+&nbsp&nbsp&nbsp&nbsp &copy; &lt;2012&gt; OpenEMR</p>
+
+</div>
+
+<p class="webpage"><a class="webpage" href="/" id="homefooter">Home</a>
+| <a class="webpage" id="featuresfooter" href="/wiki/index.php/OpenEMR_Features">Features</a>
+| <a class="webpage" id="demofooter" href="/wiki/index.php/OpenEMR_Demo">Demo</a>
+| <a class="webpage" id="downloadfooter" href="/wiki/index.php/OpenEMR_Downloads">Download</a>
+| <a class="webpage" id="wikifooter" href="/wiki/">Wiki</a>
+| <a class="webpage" id="forumfooter" target="_blank" href="http://sourceforge.net/p/openemr/discussion/">Forum</a>
+| <a class="webpage" id="supportfooter" href="/wiki/index.php/OpenEMR_Support_Guide">Support</a></p>
+
+</div>
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+  stLight.options({
+    publisher:'7a5d7bbd-52c7-4ba0-a86e-36c0356fb830'
+  });
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

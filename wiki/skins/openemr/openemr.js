@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
       name: 'OpenEMR_Features',
       css: '.features-link'
     }, {
-      name: 'OpenEMR_Version_4_2_2_Demo',
+      name: 'OpenEMR_Demo',
       css: '.demo-link'
     }, {
       name: 'OpenEMR_Downloads',

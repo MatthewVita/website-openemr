@@ -2214,6 +2214,24 @@ class OutputPage {
 		$bodyAttrs['class'] .= ' ' . Sanitizer::escapeClass( 'page-' . $this->getTitle()->getPrefixedText() );
 		$bodyAttrs['class'] .= ' skin-' . Sanitizer::escapeClass( $wgUser->getSkin()->getSkinName() );
 
+                # NEED TO ADD THE ID HERE (wiki vs download vs demo vs support)
+                # USE THE DOCUMENT TITLE
+                if (Sanitizer::escapeClass($this->getTitle()->getPrefixedText()) == "OpenEMR_Features") {
+                    $bodyAttrs['id'] = 'features';
+                }
+                else if (Sanitizer::escapeClass($this->getTitle()->getPrefixedText()) == "Development_4_2_2_Demo") {
+                    $bodyAttrs['id'] = 'demo';
+                }
+                else if (Sanitizer::escapeClass($this->getTitle()->getPrefixedText()) == "OpenEMR_Downloads") {
+                    $bodyAttrs['id'] = 'download';
+                }
+                else if (Sanitizer::escapeClass($this->getTitle()->getPrefixedText()) == "OpenEMR_Support_Guide") {
+                    $bodyAttrs['id'] = 'support';
+                }
+                else {
+                    $bodyAttrs['id'] = 'wiki';
+                }
+
 		$ret .= Html::openElement( 'body', $bodyAttrs ) . "\n";
 
 		return $ret;

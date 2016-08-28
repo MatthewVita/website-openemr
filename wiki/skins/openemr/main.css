@@ -40,11 +40,12 @@
 */
 
 body {
+	min-width: 350px;
 	font: x-small sans-serif;
-	background: #f9f9f9 url(headbg.jpg) 0 0 no-repeat;
 	color: black;
 	margin: 0;
 	padding: 0;
+	background: rgba(97, 174, 193, 0.32);
 }
 
 /* scale back up to a sane default */
@@ -583,7 +584,7 @@ table.rimage {
 .portlet {
 	border: none;
 	margin: 0 0 .5em;
-	padding: 0;
+	padding: 6px;
 	float: none;
 	width: 11.6em;
 	overflow: hidden;
@@ -991,7 +992,7 @@ li#ca-watch, li#ca-unwatch, li#ca-varlang-0, li#ca-print {
 }
 
 .prefsection legend {
-	font-weight: bold;   
+	font-weight: bold;
 }
 .prefsection table, .prefsection legend {
 	background-color: #F9F9F9;

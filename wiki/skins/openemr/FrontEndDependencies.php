@@ -46,7 +46,7 @@ class CacheBustedDependency extends Dependency {
 }
 
 class FrontEndDependencies {
-	private $dependencies = [];
+	private $dependencies = array();
 	const HTML_LINE_BREAK = "\n";
 
 	public function	__construct() {
@@ -85,7 +85,7 @@ class FrontEndDependencies {
 	}
 
 	public function bundleForNonWiki() {
-		$output = [];
+		$output = array();
 
 		foreach ( $this->dependencies as $dependency ) {
 			$loc = $dependency->getLocation();

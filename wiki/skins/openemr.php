@@ -10,6 +10,9 @@
  * @ingroup Skins
  */
 
+
+require 'openemr/FrontEndDependencies.php';
+
 if( !defined( 'MEDIAWIKI' ) )
 	die( -1 );
 
@@ -28,21 +31,8 @@ class Skinopenemr extends SkinTemplate {
 
 		parent::setupSkinUserCss( $out );
 
-		// Append to the default screen common & print styles...
-		$out->addStyle( 'openemr/main.css', 'screen' );
-                $out->addStyle( '/screenstyle.css', 'screen' );
-		if( $wgHandheldStyle ) {
-			// Currently in testing... try 'chick/main.css'
-			$out->addStyle( $wgHandheldStyle, 'handheld' );
-		}
-
-		$out->addStyle( 'openemr/IE50Fixes.css', 'screen', 'lt IE 5.5000' );
-		$out->addStyle( 'openemr/IE55Fixes.css', 'screen', 'IE 5.5000' );
-		$out->addStyle( 'openemr/IE60Fixes.css', 'screen', 'IE 6' );
-		$out->addStyle( 'openemr/IE70Fixes.css', 'screen', 'IE 7' );
-
-		$out->addStyle( 'openemr/rtl.css', 'screen', '', 'rtl' );
-
+		$dependencies = new FrontEndDependencies();
+		$dependencies->bundleForWiki( $out );
 	}
 }
 
@@ -74,7 +64,7 @@ class openemrTemplate extends QuickTemplate {
 
 <div class="container_webpage">
 <div style="font-size:150%">
-<?php require("../template/header.txt"); ?>
+<?php require("../template/header.html"); ?>
 </div>
 <div class="contentfooterwrapper">
 
@@ -213,7 +203,7 @@ if($this->data['copyrightico']) { ?>
 <?php endif; ?>
 
 <div style="font-size:150%">
-<?php require("../template/footer.txt"); ?>
+<?php require("../template/footer.html"); ?>
 </div>
 </div>
 </div>

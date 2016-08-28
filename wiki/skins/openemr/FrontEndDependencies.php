@@ -2,6 +2,8 @@
 
 // TODO: should really split these classes into their own files
 
+echo "hey5";
+
 class Dependency {
 	public $order;
 	public $assetType;
@@ -32,6 +34,8 @@ class Dependency {
 	}
 }
 
+echo "hey6";
+
 class CacheBustedDependency extends Dependency {
   public function getLocation() {
     $alreadyContainsQueryString = strpos($this->location, '?');
@@ -44,6 +48,8 @@ class CacheBustedDependency extends Dependency {
     return $this->location . '&v=' . $valueForCacheInvalidation;
   }
 }
+
+echo "hey7";
 
 class FrontEndDependencies {
 	private $dependencies = [];

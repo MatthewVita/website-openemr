@@ -4,9 +4,21 @@
   <title>OpenEMR Project</title>
 
 <?php
+
+  echo "hey1";
+
   include( 'wiki/skins/openemr/FrontEndDependencies.php' );
+
+  echo "hey2";
+
   $dependencies = new FrontEndDependencies();
+
+  echo "hey3";
+
   echo $dependencies->bundleForNonWiki();
+
+  echo "hey4";
+
 ?>
 </head>
 

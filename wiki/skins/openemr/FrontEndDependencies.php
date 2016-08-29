@@ -1,16 +1,16 @@
 <?php
 
-// TODO: should really split these classes into their own files
+// TODO START: The following classes should be placed in their own files in
+// ~/website-openemr/wiki/skins/openemr/dependencies
 
 class Dependency {
-	public $order;
-	public $assetType;
-	public $location;
-	public $appliesToWikiOnly;
+	private $order;
+	protected $location;
+	private $appliesToWikiOnly;
+	protected $lineBreakChar = "\n";
 
-	public function	__construct( $order, $assetType, $location, $appliesToWikiOnly ) {
+	public function	__construct( $order, $location, $appliesToWikiOnly ) {
 		$this->order = $order;
-		$this->assetType = $assetType;
 		$this->location = $location;
 		$this->appliesToWikiOnly = $appliesToWikiOnly;
 	}
@@ -19,12 +19,8 @@ class Dependency {
 		return $this->order;
 	}
 
-	public function getLocation() {
+	protected function getLocation() {
 		return $this->location;
-	}
-
-	public function getAssetType() {
-		return $this->assetType;
 	}
 
 	public function getAppliesToWikiOnly() {
@@ -32,55 +28,77 @@ class Dependency {
 	}
 }
 
-class CacheBustedDependency extends Dependency {
-  public function getLocation() {
-    $alreadyContainsQueryString = strpos($this->location, '?');
-    $valueForCacheInvalidation = time();
+class JavaScriptDependency extends Dependency {
+	public function getHtmlValue() {
+		return '<script type="text/javascript" src="' . $this->getLocation() . '"></script>' . $this->lineBreakChar;
+	}
+}
 
-    if ($alreadyContainsQueryString === false) {
-      return $this->location . '?v=' . $valueForCacheInvalidation;
-    }
+class CssDependency extends Dependency {
+	public function getHtmlValue() {
+		return '<link rel="stylesheet" href="' . $this->getLocation() . '" />' . $this->lineBreakChar;
+	}
+}
 
-    return $this->location . '&v=' . $valueForCacheInvalidation;
-  }
+class FaviconDependency extends Dependency {
+	public function getHtmlValue() {
+		return '<link rel="shortcut icon" href="' . $this->getLocation() . '" />' . $this->lineBreakChar;
+	}
+}
+
+class MetaDependency extends Dependency {
+	private $metaData;
+
+	public function __construct( $order, $location, $appliesToWikiOnly, $metaData ) {
+		parent::__construct( $order, $location, $appliesToWikiOnly );
+		$this->metaData = $metaData;
+	}
+
+	public function getMetaData() {
+		return $this->metaData;
+	}
+
+	public function getHtmlValue() {
+		return '<meta ' . $this->getMetaData() . ' />' . $this->lineBreakChar;
+	}
+}
+
+class CacheBustedJavaScriptDependency extends JavaScriptDependency {
+	protected function getLocation() {
+		return CacheBusterUtil::bust( $this->location );
+	}
+}
+
+class CacheBustedCssDependency extends CssDependency {
+	protected function getLocation() {
+		return CacheBusterUtil::bust( $this->location );
+	}
 }
 
 class FrontEndDependencies {
 	private $dependencies = array();
-	const HTML_LINE_BREAK = "\n";
 
 	public function	__construct() {
 		$baseDir = '/wiki/skins/openemr';
 
-		$this->dependencies[] = new Dependency( 0, 'css', $baseDir . '/vendor/styles/bootstrap.min.css', false );
-		$this->dependencies[] = new Dependency( 1, 'css', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', false );
-    $this->dependencies[] = new Dependency( 2, 'css', '//fonts.googleapis.com/css?family=Montserrat', false );
-    $this->dependencies[] = new Dependency( 3, 'css', '//fonts.googleapis.com/css?family=Work+Sans', false );
-		$this->dependencies[] = new CacheBustedDependency( 4, 'css', $baseDir . '/main.css', true );
-		$this->dependencies[] = new CacheBustedDependency( 5, 'css', $baseDir . '/openemr.css', false );
-		$this->dependencies[] = new Dependency( 6, 'js', $baseDir . '/vendor/scripts/jquery.min.js', false );
-		$this->dependencies[] = new Dependency( 7, 'js', $baseDir . '/vendor/scripts/bootstrap.min.js', false );
-		$this->dependencies[] = new CacheBustedDependency( 8, 'js', $baseDir . '/openemr.js', false );
-    $this->dependencies[] = new Dependency( 9, 'shortcut', $baseDir . '/images/favicon.ico', false );
+		$this->dependencies[] = new CssDependency( 0, $baseDir . '/vendor/styles/bootstrap.min.css', false );
+		$this->dependencies[] = new CssDependency( 1, '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', false );
+		$this->dependencies[] = new CssDependency( 2, '//fonts.googleapis.com/css?family=Montserrat', false );
+		$this->dependencies[] = new CssDependency( 3, '//fonts.googleapis.com/css?family=Work+Sans', false );
+		$this->dependencies[] = new CacheBustedCssDependency( 4, $baseDir . '/main.css', true );
+		$this->dependencies[] = new CacheBustedCssDependency( 5, $baseDir . '/openemr.css', false );
+		$this->dependencies[] = new JavaScriptDependency( 6, $baseDir . '/vendor/scripts/jquery.min.js', false );
+		$this->dependencies[] = new JavaScriptDependency( 7, $baseDir . '/vendor/scripts/bootstrap.min.js', false );
+		$this->dependencies[] = new CacheBustedJavaScriptDependency( 8, $baseDir . '/openemr.js', false );
+		$this->dependencies[] = new FaviconDependency( 9, $baseDir . '/images/favicon.ico', false );
+		$this->dependencies[] = new MetaDependency( 10, null, false, 'name="HandheldFriendly" content="True"' );
+		$this->dependencies[] = new MetaDependency( 11, null, false, 'name="MobileOptimized" content="320"' );
+		$this->dependencies[] = new MetaDependency( 12, null, false, 'name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"' );
 	}
 
 	public function bundleForWiki( &$pageReference ) {
 		foreach ( $this->dependencies as $dependency ) {
-			$order = $dependency->getOrder();
-			$loc = $dependency->getLocation();
-			$type = $dependency->getAssetType();
-
-      switch ( $type ) {
-        case 'css':
-          $pageReference->addHeadItem( $order, '<link rel="stylesheet" href="' . $loc . '" />' . self::HTML_LINE_BREAK );
-          break;
-        case 'js':
-          $pageReference->addHeadItem( $order, '<script type="text/javascript" src="' . $loc . '"></script>' . self::HTML_LINE_BREAK );
-          break;
-        case 'shortcut':
-          $pageReference->addHeadItem( $order, '<link rel="shortcut icon" href="' . $loc . '" />' . self::HTML_LINE_BREAK );
-          break;
-      }
+			$pageReference->addHeadItem( $dependency->getOrder(), $dependency->getHtmlValue() );
 		}
 	}
 
@@ -88,25 +106,28 @@ class FrontEndDependencies {
 		$output = array();
 
 		foreach ( $this->dependencies as $dependency ) {
-			$loc = $dependency->getLocation();
-			$type = $dependency->getAssetType();
-			$onlyForWiki = $dependency->getAppliesToWikiOnly();
-
-			if (!$onlyForWiki) {
-        switch ( $type ) {
-          case 'css':
-            array_push( $output, '<link rel="stylesheet" href="' . $loc . '" />' );
-            break;
-          case 'js':
-            array_push( $output, '<script type="text/javascript" src="' . $loc . '"></script>' );
-            break;
-          case 'shortcut':
-            array_push( $output, '<link rel="shortcut icon" href="' . $loc . '" />' );
-            break;
-        }
+			if ( !$dependency->getAppliesToWikiOnly() ) {
+				array_push( $output, $dependency->getHtmlValue() );
 			}
 		}
 
-		return implode( self::HTML_LINE_BREAK, $output );
+		return implode( $output );
 	}
 }
+// TODO END
+
+// TODO START: The following class should be placed in its own files in
+// ~/website-openemr/wiki/skins/openemr/utils
+class CacheBusterUtil {
+	public static function bust( $file ) {
+		$alreadyContainsQueryString = strpos( $file, '?' );
+		$valueForCacheInvalidation = time();
+
+		if ( $alreadyContainsQueryString === false ) {
+			return $file . '?v=' . $valueForCacheInvalidation;
+		}
+
+		return $file . '&v=' . $valueForCacheInvalidation;
+	}
+}
+// TODO END

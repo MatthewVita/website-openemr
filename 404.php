@@ -2,12 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>OpenEMR Project</title>
-
-<?php
-  include( 'wiki/skins/openemr/FrontEndDependencies.php' );
-  $dependencies = new FrontEndDependencies();
-  echo $dependencies->bundleForNonWiki();
-?>
+  <?php
+    include( 'wiki/skins/openemr/FrontEndDependencies.php' );
+    $dependencies = new FrontEndDependencies();
+    echo $dependencies->bundleForNonWiki();
+  ?>
 </head>
 
 <!-- TODO: why doesn't the css on `body` apply this correctly? -->

@@ -7,14 +7,12 @@ class Dependency {
 	private $order;
 	protected $location;
 	private $appliesToWikiOnly;
-	private $appliesToNonWikiOnly;
 	protected $lineBreakChar = "\n";
 
-	public function	__construct( $order, $location, $appliesToWikiOnly, $appliesToNonWikiOnly ) {
+	public function	__construct( $order, $location, $appliesToWikiOnly ) {
 		$this->order = $order;
 		$this->location = $location;
 		$this->appliesToWikiOnly = $appliesToWikiOnly;
-		$this->appliesToNonWikiOnly = $appliesToNonWikiOnly;
 	}
 
 	public function getOrder() {
@@ -28,11 +26,6 @@ class Dependency {
 	public function getAppliesToWikiOnly() {
 		return $this->appliesToWikiOnly;
 	}
-
-	public function getAppliesToNonWikiOnly() {
-		return $this->appliesToNonWikiOnly;
-	}
-
 }
 
 class JavaScriptDependency extends Dependency {
@@ -56,8 +49,8 @@ class FaviconDependency extends Dependency {
 class MetaDependency extends Dependency {
 	private $metaData;
 
-	public function __construct( $order, $location, $appliesToWikiOnly, $appliesToNonWikiOnly, $metaData ) {
-		parent::__construct( $order, $location, $appliesToWikiOnly, $appliesToNonWikiOnly );
+	public function __construct( $order, $location, $appliesToWikiOnly, $metaData ) {
+		parent::__construct( $order, $location, $appliesToWikiOnly );
 		$this->metaData = $metaData;
 	}
 
@@ -88,27 +81,24 @@ class FrontEndDependencies {
 	public function	__construct() {
 		$baseDir = '/wiki/skins/openemr';
 
-		$this->dependencies[] = new CssDependency( 0, $baseDir . '/vendor/styles/bootstrap.min.css', false, false );
-		$this->dependencies[] = new CssDependency( 1, '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', false, false );
-		$this->dependencies[] = new CssDependency( 2, '//fonts.googleapis.com/css?family=Montserrat', false, false );
-		$this->dependencies[] = new CssDependency( 3, '//fonts.googleapis.com/css?family=Work+Sans', false, false );
-		$this->dependencies[] = new CacheBustedCssDependency( 4, $baseDir . '/main.css', true, false );
-		$this->dependencies[] = new CacheBustedCssDependency( 5, $baseDir . '/openemr.css', false, false );
-		$this->dependencies[] = new JavaScriptDependency( 6, $baseDir . '/vendor/scripts/jquery.min.js', false, false );
-		$this->dependencies[] = new JavaScriptDependency( 7, $baseDir . '/vendor/scripts/bootstrap.min.js', false, false );
-		$this->dependencies[] = new JavaScriptDependency( 8, $baseDir . '/openemr_google_analytics.js', false, true );
-		$this->dependencies[] = new CacheBustedJavaScriptDependency( 9, $baseDir . '/openemr.js', false, false );
-		$this->dependencies[] = new FaviconDependency( 10, $baseDir . '/images/favicon.ico', false, false );
-		$this->dependencies[] = new MetaDependency( 11, null, false, false, 'name="HandheldFriendly" content="True"' );
-		$this->dependencies[] = new MetaDependency( 12, null, false, false, 'name="MobileOptimized" content="320"' );
-		$this->dependencies[] = new MetaDependency( 13, null, false, false, 'name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"' );
+		$this->dependencies[] = new CssDependency( 0, $baseDir . '/vendor/styles/bootstrap.min.css', false );
+		$this->dependencies[] = new CssDependency( 1, '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', false );
+		$this->dependencies[] = new CssDependency( 2, '//fonts.googleapis.com/css?family=Montserrat', false );
+		$this->dependencies[] = new CssDependency( 3, '//fonts.googleapis.com/css?family=Work+Sans', false );
+		$this->dependencies[] = new CacheBustedCssDependency( 4, $baseDir . '/main.css', true );
+		$this->dependencies[] = new CacheBustedCssDependency( 5, $baseDir . '/openemr.css', false );
+		$this->dependencies[] = new JavaScriptDependency( 6, $baseDir . '/vendor/scripts/jquery.min.js', false );
+		$this->dependencies[] = new JavaScriptDependency( 7, $baseDir . '/vendor/scripts/bootstrap.min.js', false );
+		$this->dependencies[] = new CacheBustedJavaScriptDependency( 8, $baseDir . '/openemr.js', false );
+		$this->dependencies[] = new FaviconDependency( 9, $baseDir . '/images/favicon.ico', false );
+		$this->dependencies[] = new MetaDependency( 10, null, false, 'name="HandheldFriendly" content="True"' );
+		$this->dependencies[] = new MetaDependency( 11, null, false, 'name="MobileOptimized" content="320"' );
+		$this->dependencies[] = new MetaDependency( 12, null, false, 'name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"' );
 	}
 
 	public function bundleForWiki( &$pageReference ) {
 		foreach ( $this->dependencies as $dependency ) {
-			if ( !$dependency->getAppliesToNonWikiOnly() ) {
-				$pageReference->addHeadItem( $dependency->getOrder(), $dependency->getHtmlValue() );
-			}
+			$pageReference->addHeadItem( $dependency->getOrder(), $dependency->getHtmlValue() );
 		}
 	}
 

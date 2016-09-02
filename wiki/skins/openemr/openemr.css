@@ -473,6 +473,14 @@ body {
   line-height: 25px;
 }
 
+.home .main-points .point .info a,
+.home .main-points .point .info a:visited,
+.home .main-points .point .info a:hover,
+.home .main-points .point .info a:active {
+  color: #F2F2F2;
+  text-decoration: underline;
+}
+
 @media (max-width: 1200px) {
   .home .main-points .point {
     height: 270px;

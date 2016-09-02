@@ -38,7 +38,7 @@
             Open Source
           </h2>
           <p class="info">
-            Open source software has changed the world for the better. OpenEMR is a leader in healthcare open source software. Costly proprietary EMRs are no longer the only option. Learn how to start contributing today!
+            Open source software has changed the world for the better. OpenEMR is a leader in healthcare open source software. Costly proprietary EMRs are no longer the only option. <a href="/wiki/index.php/FAQ#How_do_I_begin_to_volunteer_for_the_OpenEMR_project.3F">Learn how to start contributing today!</a>
           </p>
         </div>
         <div class="col-md-4 point certifications">

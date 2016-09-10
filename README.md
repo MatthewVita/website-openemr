@@ -47,15 +47,37 @@ exit;
 Set up working area:
 
 ```
-sudo ln -s  /home/$USER/OpenEMR-website/ /var/www/html
+$ sudo ln -s  /home/$USER/website-openemr/ /var/www/html
 ```
 
-Open up http://localhost/wiki/config/index.php to install Mediawiki, then run ```$ mv wiki/config/LocalSettings.php wiki/```
+Change directory to the wiki content:
 
+```
+$ cd /home/$USER/website-openemr/wiki
+```
+
+Download Mediawiki (must be specified version... newer version will error out!):
+
+```
+$ wget https://releases.wikimedia.org/mediawiki/1.16/mediawiki-1.16.1.tar.gz
+```
+
+Install Mediawiki:
+```
+$ tar -xvf mediawiki-1.16.1.tar.gz
+$ cp -f mediawiki-1.16.1/** ./
+$ chmod a+w config
+$ rm -rf mediawiki-1.16*
+```
+
+Configure Mediawiki:
+```
+$ # Open http://localhost/wiki/config/index.php and follow along
+$ mv config/LocalSettings.php ./
+$ # Using your favorite editor, open up LocalSettings.php and change the value of $wgDefaultSkin value to 'openemr'
+```
 
 ## Tasks
-
-Implementing a modern frontend with Bootstrap will be done in this fork.
 Project tasks are listed here: http://www.open-emr.org/wiki/index.php/Active_Projects#Website_Rework
 
 ## Caveats

@@ -7,7 +7,7 @@
 body {
   /* TODO: using inline style for this on the homepage because this is being
      ignored for some reason. */
-  background: #f2f5f8;
+  background: #ffffff;
 }
 
 /* --------------- */
@@ -43,6 +43,11 @@ body {
   display: inline-block;
 }
 
+.donate-link {
+  color: ##1bbc9b !important;
+  font-weight: bold;
+}
+
 /* --------------------------- */
 /* --- MEDIAWIKI OVERRIDES --- */
 /* --------------------------- */
@@ -56,13 +61,12 @@ body {
   min-width: 350px;
   width: 100%;
   margin: auto;
-  border-left-color: #5A5A5A;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: black;
-  border-right-style: solid;
-  border-right-width: 1px;
   background: #ffffff;
+}
+
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 /* --------------------------- */
@@ -91,7 +95,7 @@ body {
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1300px;
+  // max-width: 1300px;
 }
 
 /* -------------- */
@@ -176,7 +180,6 @@ body {
 /* --- FOOTER --- */
 /* -------------- */
 .footer {
-  max-width: 1300px;
   min-height: 500px;
   background: #ECECEC;
 }
@@ -187,6 +190,7 @@ body {
 /* TODO: for some reason, the social bar icons aren't perfectly in the center */
 .footer .social-bar {
   background: #75706c;
+  padding-top: 15px;
   min-height: 100px;
 }
 
@@ -197,36 +201,17 @@ body {
   }
 }
 
-.footer .social-bar ul li {
-  list-style: none;
-  display: inline-block;
-  margin-left: 12px;
-  margin-right: 12px;
-  margin-top: 15px;
-}
-
-.footer .sitemap {
-  min-height: 550px;
+.footer {
+  padding-bottom: 65px;
 }
 
 .footer .sitemap .logo {
   padding-top: 30px;
-  padding-left: 20px;
 }
 
 .footer .sitemap .links .title {
   font-family: 'Montserrat', sans-serif;
   color: #505aa8;
-}
-
-.footer .sitemap .links .project-links-column {
-  margin-left: 90px;
-}
-
-.footer .sitemap .links .project-links-column,
-.footer .sitemap .links .help-and-support-column,
-.footer .sitemap .links .developer-links-column {
-  min-width: 300px;
 }
 
 /* TODO: when the footer gets too thin, show collaposable top-level menus instead */
@@ -293,6 +278,8 @@ body {
   border-bottom-color: #5cbd6c;
   border-bottom-width: 6px;
   border-bottom-style: solid;
+  background-size: cover;
+  background-position: center middle;
 }
 
 .carousel .slide.slide-0 {

@@ -7,7 +7,11 @@
 body {
   /* TODO: using inline style for this on the homepage because this is being
      ignored for some reason. */
-  background: #f2f5f8;
+  background: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'League Spartan';
 }
 
 /* --------------- */
@@ -43,12 +47,18 @@ body {
   display: inline-block;
 }
 
+.donate-link {
+  color: ##1bbc9b !important;
+  font-weight: bold;
+}
+
 /* --------------------------- */
 /* --- MEDIAWIKI OVERRIDES --- */
 /* --------------------------- */
 #globalWrapper {
   /* MinHeight = available height - min header - min carousel - min footer */
   min-height: calc(100vh - 80px - 395px - 500px);
+  font-size: 18px;
 }
 
 .container_webpage {
@@ -56,13 +66,47 @@ body {
   min-width: 350px;
   width: 100%;
   margin: auto;
-  border-left-color: #5A5A5A;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: black;
-  border-right-style: solid;
-  border-right-width: 1px;
   background: #ffffff;
+}
+
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.portlet {
+  background: #ffffff;
+}
+
+.portlet h5 {
+  text-transform: capitalize;
+  font-size: 120%;
+}
+
+.pBody {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  background: none;
+  font-size: 14px;
+}
+
+#content {
+  border: none;
+}
+#content h1, #content h2, #content h3,
+#content h4, #content h5, #content h6 {
+  font-family: "Open Sans";
+  font-weight: 100;
+  font-size: 24px;
+}
+
+#bodyContent p {
+  font-size: 16px;
+}
+
+#p-cactions .pBody {
+
 }
 
 /* --------------------------- */
@@ -91,7 +135,7 @@ body {
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1300px;
+  // max-width: 1300px;
 }
 
 /* -------------- */
@@ -127,14 +171,14 @@ body {
 
 /* nice green border when site is tablet/mobile and carousel
    cannot be shown */
-@media (max-width: 700px) {
+/*@media (max-width: 700px) {
   .navbar {
     padding-bottom: 15px;
     border-bottom-color: #5cbd6c;
     border-bottom-width: 3px;
     border-bottom-style: solid;
   }
-}
+}*/
 
 @media (max-width: 1200px) {
   .navbar .navbar-header {
@@ -176,9 +220,9 @@ body {
 /* --- FOOTER --- */
 /* -------------- */
 .footer {
-  max-width: 1300px;
   min-height: 500px;
-  background: #ECECEC;
+  background: #313131;;
+  color: #fff;
 }
 
 /* TODO: there is an issue when on non-front page pages (e.x.: wiki)
@@ -186,7 +230,8 @@ body {
    height. */
 /* TODO: for some reason, the social bar icons aren't perfectly in the center */
 .footer .social-bar {
-  background: #75706c;
+  background: #fff;
+  padding-top: 15px;
   min-height: 100px;
 }
 
@@ -197,36 +242,21 @@ body {
   }
 }
 
-.footer .social-bar ul li {
-  list-style: none;
-  display: inline-block;
-  margin-left: 12px;
-  margin-right: 12px;
-  margin-top: 15px;
-}
-
-.footer .sitemap {
-  min-height: 550px;
+.footer {
+  padding-bottom: 65px;
 }
 
 .footer .sitemap .logo {
   padding-top: 30px;
-  padding-left: 20px;
 }
 
 .footer .sitemap .links .title {
   font-family: 'Montserrat', sans-serif;
-  color: #505aa8;
+  color: #339ad6;
 }
 
-.footer .sitemap .links .project-links-column {
-  margin-left: 90px;
-}
-
-.footer .sitemap .links .project-links-column,
-.footer .sitemap .links .help-and-support-column,
-.footer .sitemap .links .developer-links-column {
-  min-width: 300px;
+.footer .title {
+  font-size: 1.25em;
 }
 
 /* TODO: when the footer gets too thin, show collaposable top-level menus instead */
@@ -249,11 +279,14 @@ body {
 }
 
 .footer .sitemap .links a {
-  color: #75706c;
-  font-size: 19px;
-  line-height: 30px;
+  color: #878787;
+  font-size: 1.25em;
   text-decoration: none;
   font-family: 'Work Sans', sans-serif;
+}
+
+.footer small {
+  color: #878787;
 }
 
 .footer .sitemap .links a:hover,
@@ -293,6 +326,8 @@ body {
   border-bottom-color: #5cbd6c;
   border-bottom-width: 6px;
   border-bottom-style: solid;
+  background-size: cover;
+  background-position: center middle;
 }
 
 .carousel .slide.slide-0 {
@@ -385,8 +420,24 @@ body {
 /* ------------ */
 /* --- HOME --- */
 /* ------------ */
-.home h1, .home h2, .home h3, .home p, .home a {
-  font-family: 'Work Sans', sans-serif;
+.home h1, .home h2, .home h3 {
+  /*font-family: 'Work Sans', sans-serif;*/
+  text-transform: uppercase;
+}
+
+h3 {
+  color: rgba(255,255,255,0.75);
+}
+
+h1 span.logo-emr {
+  font-size:65%;
+  font-weight: 100;
+  color: #d9d9d9;
+}
+
+.hero h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .home a, .home a:visited, .home a:hover, .home a:active {
@@ -409,6 +460,38 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+.donations-needed {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #c9302c;
+}
+.donations-needed h3 {
+  color: #c9302c;
+}
+.donations-needed a, .donations-needed a:visited,
+.donations-needed a:active {
+  color: #c9302c;
+}
+.donations-needed a.btn {
+  color: #c9302c;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  animation: all 2s;
+}
+.donations-needed a.btn:hover {
+  background-color: #c9302c;
+  color: #fff;
+}
+.donations-needed .btn {
+  border-radius: 8px;
+  border: 2px solid #c9302c;
+  color: #c9302c;
+  background-color: transparent;
+}
+
 
 @media (max-width: 700px) {
   .home .about .row.about-logo {
@@ -443,29 +526,63 @@ body {
   }
 }
 
-.home .main-points .non-profit-backing {
+.home .what-is-openemr {
+  margin: 45px 0px;
+  padding: 10px 0px 25px;
+  color: #fff;
+  background-color: #313131;
+  box-shadow: 0px 0px 8px #d8d8d8;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 8px #d8d8d8;  
+}
+
+.home .what-is-openemr a, .home .what-is-openemr a:active,
+.home .what-is-openemr a:visited {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.home .non-profit-backing {
   background: #339ad6;
 }
 
-.home .main-points .open-source {
-  background: #505aaB;
+.home .open-source {
+  background: #339A2C;
 }
 
-.home .main-points .certifications {
-  background: #1bbc9b;
+.home .certifications {
+  background: #7B001B;
 }
 
-.home .main-points .point {
+.home .point {
   height: 260px;
 }
 
-.home .main-points .point .title {
-  font-family: 'Montserrat', sans-serif;
+.panel-default {
+  box-shadow: 0px 0px 8px #d8d8d8;
+}
+
+.equal, .equal > div[class*='col-'] {  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex:1 1 auto;
+}
+
+.home .panel-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16pt;
+  text-transform: uppercase;
+  padding: 10px 0px;
   color: #ffffff;
   text-align: center;
 }
 
-.home .main-points .point .info {
+.home .point .info {
   text-align: center;
   padding-left: 40px;
   padding-right: 40px;
@@ -486,7 +603,6 @@ body {
     height: 270px;
     padding-left: 5px;
     padding-right: 5px;
-    line-height: 20px;
   }
 }
 
@@ -495,7 +611,6 @@ body {
     height: 310px;
     padding-left: 5px;
     padding-right: 5px;
-    line-height: 20px;
   }
 }
 
@@ -509,7 +624,6 @@ body {
   .home .main-points .point .info {
     padding-left: 10px;
     padding-right: 10px;
-    line-height: 20px;
   }
 }
 
@@ -523,7 +637,6 @@ body {
   .home .main-points .point .info {
     padding-left: 10px;
     padding-right: 10px;
-    line-height: 20px;
   }
 }
 
@@ -537,20 +650,32 @@ body {
   .home .main-points .point .info {
     padding-left: 10px;
     padding-right: 10px;
-    line-height: 20px;
   }
+}
+
+.home .features {
+  background-color: #2788CD;
+  color: #fff;
+}
+
+.features a, .features a:visited {
+  color: #fff;
+}
+.features a:hover, .features a:visited:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .home .features .title {
   font-family: 'Montserrat', sans-serif;
-  color: #505aa8;
-  text-align: center;
+  /*color: #505aa8;
+  text-align: center;*/
 }
 
 .home .features .about-features {
   color: #75706c;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  /*line-height: 27px;*/
   padding-left: 45px;
   padding-right: 45px;
   text-align: justify;
@@ -561,21 +686,21 @@ body {
 }
 
 .home .features .bullets .bullet a {
-  font-size: 22px;
+  font-size: 14pt;
   line-height: 50px;
-  color: #339ad6 !important;
+  /*color: #339ad6 !important;*/
 }
 
 .home .features .bullets .bullet i {
-  font-size: 22px;
-  color: #75706c;
+  font-size: 18px;
+  color: #ffffff;
 }
 
 @media (max-width: 993px) {
   .home .features .about-features {
     padding-left: 10px;
     padding-right: 10px;
-    line-height: 22px;
+    /*line-height: 22px;*/
   }
 
   .home .features .bullets .center-content-inside-column {

@@ -10,9 +10,10 @@
 </head>
 
 <!-- TODO: why doesn't the css on `body` apply this correctly? -->
-<body>
-  <?php include( 'template/header.html' );?>
+<body style="background: #f2f5f8">
   <div class="container_webpage">
+    <?php include( 'template/header.html' );?>
+
     <div class="home">
       <div class="about">
         <div class="row about-logo">
@@ -85,9 +86,9 @@
           </div>
         </div>
       </div>
-    </div>
+
+    <?php include( 'template/footer.html' );?>
   </div>
-  <?php include( 'template/footer.html' );?>
 </body>
 
 </html>

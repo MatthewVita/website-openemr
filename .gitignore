@@ -1,6 +1,8 @@
 apidocs
 wiki
-!wiki/skins/openemr
+!wiki/skins/openemr/
+!wiki/skins/openemr/images/
+!wiki/skins/openemr/**
 !wiki/screenstyle.css
 !wiki/skins/openemr.deps.php
 !wiki/skins/openemr.php

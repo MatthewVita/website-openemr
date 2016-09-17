@@ -9,19 +9,57 @@
   ?>
 </head>
 
-<!-- TODO: why doesn't the css on `body` apply this correctly? -->
 <body>
   <?php include( 'template/header.html' );?>
-  <div class="container_webpage">
+  <div class="container-fluid">
     <div class="home">
       <div class="about">
         <div class="row about-logo">
           <img class="center-image" src="/wiki/skins/openemr/images/main-text.jpg" />
         </div>
-        <div class="row about-text">
-          <p>OpenEMR is the most popular open source electronic health records and medical practice management solution. OpenEMR is <a href="/wiki/index.php/OpenEMR_Wiki_Home_Page#ONC_Ambulatory_EHR_Certification">certified</a> and is used all over the world, benefiting millions of patients. With the goal of making OpenEMR a superior alternative to its proprietary counterparts, passionate volunteers, contributors, and <a href="http://www.oemr.org/">OEMR.org 501(c)3</a> are dedicated to guarding OpenEMR's status as a free, open source software solution for medical practices with a commitment to openness, kindness and cooperation. </p>
+      </div>
+      
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Non-profit Backing</h3></div>
+          <img src="wiki/skins/openemr/images/dummy-oemr.png" alt="" class="img-responsive center-block">
+          <hr>
+          <div class="panel-body">
+            <p>OEMR is a non-profit organization formed to ensure that all 
+            people have access to high-quality medical care through the donation
+            of free, open source medical software and service relating to that
+            software.</p>
+          </div>
         </div>
       </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Open Source</h3></div>
+          <div class="panel-body">
+            <img src="wiki/skins/openemr/images/osi.png" alt="" class="img-responsive center-block">
+            <hr>
+            <p>OEMR is a non-profit organization formed to ensure that all 
+            people have access to high-quality medical care through the donation
+            of free, open source medical software and service relating to that 
+            software.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">MU2 Certification</h3></div>
+          <div class="panel-body">
+            <img src="wiki/skins/openemr/images/onc-cert.jpg" alt="" class="img-responsive center-block">
+            <hr>
+            <p>OEMR is a non-profit organization formed to ensure that all people
+            have access to high-quality medical care through the donation of free,
+            open source medical software and service relating to that software.
+            </p>  
+          </div>
+        </div>
+      </div>
+    </div>
 
       <div class="row main-points">
         <div class="col-md-4 point non-profit-backing">

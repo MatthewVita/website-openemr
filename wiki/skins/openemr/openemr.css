@@ -10,6 +10,10 @@ body {
   background: #ffffff;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'League Spartan';
+}
+
 /* --------------- */
 /* --- HELPERS --- */
 /* --------------- */
@@ -67,6 +71,31 @@ body {
 .header {
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+.portlet {
+  background: #e8e8e8;
+}
+
+.portlet h5 {
+  text-transform: capitalize;
+  font-size: 120%;
+}
+
+.pBody {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  background: none;
+  font-size: 14px;
+}
+
+#content {
+  border: none;
+}
+
+#p-cactions .pBody {
+
 }
 
 /* --------------------------- */
@@ -131,14 +160,14 @@ body {
 
 /* nice green border when site is tablet/mobile and carousel
    cannot be shown */
-@media (max-width: 700px) {
+/*@media (max-width: 700px) {
   .navbar {
     padding-bottom: 15px;
     border-bottom-color: #5cbd6c;
     border-bottom-width: 3px;
     border-bottom-style: solid;
   }
-}
+}*/
 
 @media (max-width: 1200px) {
   .navbar .navbar-header {
@@ -372,8 +401,24 @@ body {
 /* ------------ */
 /* --- HOME --- */
 /* ------------ */
-.home h1, .home h2, .home h3, .home p, .home a {
-  font-family: 'Work Sans', sans-serif;
+.home h1, .home h2, .home h3 {
+  /*font-family: 'Work Sans', sans-serif;*/
+  text-transform: uppercase;
+}
+
+h3 {
+  color: rgba(255,255,255,0.75);
+}
+
+h1 span.logo-emr {
+  font-size:65%;
+  font-weight: 100;
+  color: #d9d9d9;
+}
+
+.hero h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .home a, .home a:visited, .home a:hover, .home a:active {
@@ -396,6 +441,8 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+
 
 @media (max-width: 700px) {
   .home .about .row.about-logo {
@@ -430,29 +477,52 @@ body {
   }
 }
 
-.home .main-points .non-profit-backing {
+.home .what-is-openemr {
+  margin: 45px 0px;
+  padding: 10px 0px 25px;
+  color: #fff;
+  background-color: #313131;
+}
+
+.home .non-profit-backing {
   background: #339ad6;
 }
 
-.home .main-points .open-source {
-  background: #505aaB;
+.home .open-source {
+  background: #339A2C;
 }
 
-.home .main-points .certifications {
-  background: #1bbc9b;
+.home .certifications {
+  background: #7B001B;
 }
 
-.home .main-points .point {
+.home .point {
   height: 260px;
 }
 
-.home .main-points .point .title {
-  font-family: 'Montserrat', sans-serif;
+.panel-default {
+  box-shadow: 0px 0px 8px #d8d8d8;
+}
+
+.equal, .equal > div[class*='col-'] {  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex:1 1 auto;
+}
+
+.home .panel-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16pt;
+  text-transform: uppercase;
+  padding: 10px 0px;
   color: #ffffff;
   text-align: center;
 }
 
-.home .main-points .point .info {
+.home .point .info {
   text-align: center;
   padding-left: 40px;
   padding-right: 40px;
@@ -473,7 +543,6 @@ body {
     height: 270px;
     padding-left: 5px;
     padding-right: 5px;
-    line-height: 20px;
   }
 }
 
@@ -482,7 +551,6 @@ body {
     height: 310px;
     padding-left: 5px;
     padding-right: 5px;
-    line-height: 20px;
   }
 }
 
@@ -496,7 +564,6 @@ body {
   .home .main-points .point .info {
     padding-left: 10px;
     padding-right: 10px;
-    line-height: 20px;
   }
 }
 
@@ -510,7 +577,6 @@ body {
   .home .main-points .point .info {
     padding-left: 10px;
     padding-right: 10px;
-    line-height: 20px;
   }
 }
 
@@ -524,20 +590,32 @@ body {
   .home .main-points .point .info {
     padding-left: 10px;
     padding-right: 10px;
-    line-height: 20px;
   }
+}
+
+.home .features {
+  background-color: #2788CD;
+  color: #fff;
+}
+
+.features a, .features a:visited {
+  color: #fff;
+}
+.features a:hover, .features a:visited:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .home .features .title {
   font-family: 'Montserrat', sans-serif;
-  color: #505aa8;
-  text-align: center;
+  /*color: #505aa8;
+  text-align: center;*/
 }
 
 .home .features .about-features {
   color: #75706c;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  /*line-height: 27px;*/
   padding-left: 45px;
   padding-right: 45px;
   text-align: justify;
@@ -548,21 +626,21 @@ body {
 }
 
 .home .features .bullets .bullet a {
-  font-size: 22px;
+  font-size: 14pt;
   line-height: 50px;
-  color: #339ad6 !important;
+  /*color: #339ad6 !important;*/
 }
 
 .home .features .bullets .bullet i {
-  font-size: 22px;
-  color: #75706c;
+  font-size: 18px;
+  color: #ffffff;
 }
 
 @media (max-width: 993px) {
   .home .features .about-features {
     padding-left: 10px;
     padding-right: 10px;
-    line-height: 22px;
+    /*line-height: 22px;*/
   }
 
   .home .features .bullets .center-content-inside-column {

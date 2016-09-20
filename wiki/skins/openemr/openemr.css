@@ -210,7 +210,8 @@ h1, h2, h3, h4, h5, h6 {
 /* -------------- */
 .footer {
   min-height: 500px;
-  background: #ECECEC;
+  background: #313131;;
+  color: #fff;
 }
 
 /* TODO: there is an issue when on non-front page pages (e.x.: wiki)
@@ -218,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
    height. */
 /* TODO: for some reason, the social bar icons aren't perfectly in the center */
 .footer .social-bar {
-  background: #75706c;
+  background: #fff;
   padding-top: 15px;
   min-height: 100px;
 }
@@ -240,7 +241,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .sitemap .links .title {
   font-family: 'Montserrat', sans-serif;
-  color: #505aa8;
+  color: #339ad6;
+}
+
+.footer .title {
+  font-size: 1.25em;
 }
 
 /* TODO: when the footer gets too thin, show collaposable top-level menus instead */
@@ -263,11 +268,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .sitemap .links a {
-  color: #75706c;
-  font-size: 19px;
-  line-height: 30px;
+  color: #878787;
+  font-size: 1.25em;
   text-decoration: none;
   font-family: 'Work Sans', sans-serif;
+}
+
+.footer small {
+  color: #878787;
 }
 
 .footer .sitemap .links a:hover,
@@ -442,6 +450,37 @@ h1 span.logo-emr {
   padding-bottom: 15px;
 }
 
+.donations-needed {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #fff;
+  background-color: #c9302c;
+}
+.donations-needed h3 {
+  color: #fff;
+}
+.donations-needed a, .donations-needed a:visited,
+.donations-needed a:active {
+  color: #fff;
+}
+.donations-needed a.btn {
+  color: #fff;
+  background-color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  animation: all 2s;
+}
+.donations-needed a.btn:hover {
+  background-color: #fff;
+  color: #c9302c;
+}
+.donations-needed .btn {
+  border-radius: 8px;
+  color: #fff;
+  background-color: transparent;
+}
 
 
 @media (max-width: 700px) {
@@ -482,6 +521,17 @@ h1 span.logo-emr {
   padding: 10px 0px 25px;
   color: #fff;
   background-color: #313131;
+  box-shadow: 0px 0px 8px #d8d8d8;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 8px #d8d8d8;  
+}
+
+.home .what-is-openemr a, .home .what-is-openemr a:active,
+.home .what-is-openemr a:visited {
+  text-decoration: underline;
+  color: #fff;
 }
 
 .home .non-profit-backing {

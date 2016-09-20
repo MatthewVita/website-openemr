@@ -39,9 +39,44 @@
     </div>
   </div>
 
-<div class="container-fluid home">
+<div class="container donations-needed home box-shadow">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Help needed!</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <p class="lead">OpenEMR is in urgent need of funding for the Meaningful Use Stage II Certification. Users in the United States have reaped the bounty of the EHR Bonus in Stage I and will do so again in Stage II. The majority of users, outside the United States, have benefitted from Meaningful Use Certification as well in the creation of enhancements such as Electronic Prescribing, Clinical Reminders and Secure Messaging. The experience of our colleagues abroad will continue to improve with Stage II Certification. Please consider sending a gift today.</p>
+    </div>
+    <div class="col-md-4">
+      <a href="#" class="btn btn-lg center-block"><i class="fa fa-2x fa-heart"></i><br/>Donate Now!</a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid home box-shadow">
   <div class="row equal">
-    <div class="col-md-6" style="background-image:url('wiki/skins/openemr/images/home-feature.png');background-size:cover">&nbsp;
+    <div class="col-md-6 hidden">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="wiki/skins/openemr/images/home-feature.png" class="img-responsive" alt="">
+          </div>
+          <div class="item">
+            <img src="wiki/skins/openemr/images/home-feature-1.png" class="img-responsive" alt="">
+          </div>
+          <div class="item">
+            <img src="wiki/skins/openemr/images/home-feature-2.png" class="img-responsive" alt="">
+          </div>
+          <div class="item">
+            <img src="wiki/skins/openemr/images/home-feature-3.png" class="img-responsive" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" style="background-image:url('wiki/skins/openemr/images/home-feature-3.png');background-size:cover">&nbsp;
     </div>
     <div class="col-md-6 features">
       <div class="">
@@ -98,7 +133,7 @@
         <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading non-profit-backing"><h3 class="panel-title">Non-profit Backing</h3></div>
-            <img src="wiki/skins/openemr/images/dummy-oemr.png" alt="" class="img-responsive center-block">
+            <img src="wiki/skins/openemr/images/give-heart.png" alt="" class="img-responsive center-block">
             <hr>
             <div class="panel-body">
               <p>OEMR is a non-profit organization formed to ensure that all 

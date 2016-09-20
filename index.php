@@ -13,8 +13,8 @@
   <?php include( 'template/header.html' );?>
   <div class="container-fluid" style="background-image:url(wiki/skins/openemr/images/slide-1.jpg);background-color:rgba(0,0,0,0.5);background-size:cover;height:395px">
     <div class="container hero">
-      <div class="col-md-12 text-center " style="font-weight:400; color: #fff; font-size: 12pt;height:395px;padding-top:80px;">
-        <h4>Better software. Better outcomes. Better healthcare.</h4>
+      <div class="col-xs-12 text-center" style="font-weight:400; color: #fff; font-size: 12pt;height:395px;padding-top:80px;">
+        <h4>Better&nbsp;software. Better&nbsp;outcomes. Better&nbsp;healthcare.</h4>
         <h1><span class="logo-open">open</span><span class="logo-emr">EMR</span></h1>
       </div>
     </div>
@@ -31,9 +31,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4"><img src="wiki/skins/openemr/images/ippf.png" alt="" class="img-responsive center-block"></div>
-        <div class="col-md-4"><img src="wiki/skins/openemr/images/peace-corps.png" alt="" class="img-responsive center-block"></div>
-        <div class="col-md-4"><img src="wiki/skins/openemr/images/siaya.png" alt="" class="img-responsive center-block"></div>
+        <div class="col-sm-4"><img src="wiki/skins/openemr/images/ippf.png" alt="" class="img-responsive center-block"></div>
+        <div class="col-sm-4"><img src="wiki/skins/openemr/images/peace-corps.png" alt="" class="img-responsive center-block"></div>
+        <div class="col-sm-4"><img src="wiki/skins/openemr/images/siaya.png" alt="" class="img-responsive center-block"></div>
       </div>
       <div class="row"><div class="col-md-12">&nbsp;</div></div>
     </div>
@@ -50,13 +50,13 @@
       <p class="lead">OpenEMR is in urgent need of funding for the Meaningful Use Stage II Certification. Users in the United States have reaped the bounty of the EHR Bonus in Stage I and will do so again in Stage II. The majority of users, outside the United States, have benefitted from Meaningful Use Certification as well in the creation of enhancements such as Electronic Prescribing, Clinical Reminders and Secure Messaging. The experience of our colleagues abroad will continue to improve with Stage II Certification. Please consider sending a gift today.</p>
     </div>
     <div class="col-md-4">
-      <a href="#" class="btn btn-lg center-block"><i class="fa fa-2x fa-heart"></i><br/>Donate Now!</a>
+      <a href="#" class="btn btn-lg btn-block"><i class="fa fa-2x fa-heart"></i><br/>Donate Now!</a>
     </div>
   </div>
 </div>
 
-<div class="container-fluid home box-shadow">
-  <div class="row equal">
+<div class="container-fluid home">
+  <div class="row">
     <div class="col-md-6 hidden">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
@@ -76,9 +76,9 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6" style="background-image:url('wiki/skins/openemr/images/home-feature-3.png');background-size:cover">&nbsp;
+    <div class="col-sm-6 visible-sm-*" style="min-height:467px;background-image:url('wiki/skins/openemr/images/home-feature-3.png');background-size:cover">&nbsp;
     </div>
-    <div class="col-md-6 features">
+    <div class="col-xs-12 col-sm-6 features">
       <div class="">
         <div class="row title">
           <div class="col-md-12">
@@ -90,7 +90,7 @@
             <p>Our vibrant community of volunteers and contributors have maintained critical OpenEMR features for over a decade. With over <a href="/wiki/index.php/OpenEMR_Features#Multilanguage_Support">30 supported languages</a>, many customizations, and full data ownership, OpenEMR features shine. On top of this, users in need of support can take advantage of our <a href="https://sourceforge.net/p/openemr/discussion/202505/">volunteer support network</a> as well as over <a href="/wiki/index.php/OpenEMR_Professional_Support">30 vendors in over 10 countries.</a></p>
           </p>
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-6">
             <div class="center-content-inside-column">
               <div class="bullet"><a href="/wiki/index.php/OpenEMR_Features#Patient_Demographics"><i class="fa fa-stethoscope"></i> Patient Demographics</a></div>
               <div class="bullet"><a href="/wiki/index.php/OpenEMR_Features#Patient_Scheduling"><i class="fa fa-calendar"></i> Patient Scheduling</a></div>
@@ -99,7 +99,7 @@
               <div class="bullet"><a href="/wiki/index.php/OpenEMR_Features#Reports"><i class="fa fa-files-o"></i> Reports</a></div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-6">
             <div class="center-content-inside-column">
               <div class="bullet"><a href="/wiki/index.php/OpenEMR_Features#Patient_Portal"><i class="fa fa-external-link"></i> Patient Portal</a></div>
               <div class="bullet"><a href="/wiki/index.php/OpenEMR_Features#Clinical_Decision_Rules"><i class="fa fa-user-md"></i> Clinical Decision Rules</a></div>
@@ -112,7 +112,7 @@
   </div>
 </div>
 
-  <div class="container-fluid home what-is-openemr">
+  <div class="container-fluid home what-is-openemr box-shadow">
     <div class="row">
       <div class="col-md-12 text-center">
         <h3>What is OpenEMR</h3>
@@ -129,8 +129,8 @@
     </div>
   </div>
   <div class="container home">
-      <div class="row equal">
-        <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-4 col-xs-12">
           <div class="panel panel-default">
             <div class="panel-heading non-profit-backing"><h3 class="panel-title">Non-profit Backing</h3></div>
             <img src="wiki/skins/openemr/images/give-heart.png" alt="" class="img-responsive center-block">
@@ -143,7 +143,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12">
           <div class="panel panel-default">
             <div class="panel-heading open-source"><h3 class="panel-title">Open Source</h3></div>
             <div class="panel-body">
@@ -153,7 +153,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12">
           <div class="panel panel-default">
             <div class="panel-heading certifications"><h3 class="panel-title">MU2 Certification</h3></div>
             <div class="panel-body">

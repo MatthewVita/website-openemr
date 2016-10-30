@@ -51,7 +51,7 @@
       <p class="lead">OpenEMR is in urgent need of funding for the Meaningful Use Stage II Certification. Users in the United States have reaped the bounty of the EHR Bonus in Stage I and will do so again in Stage II. The majority of users, outside the United States, have benefitted from Meaningful Use Certification as well in the creation of enhancements such as Electronic Prescribing, Clinical Reminders and Secure Messaging. The experience of our colleagues abroad will continue to improve with Stage II Certification. Please consider sending a gift today.</p>
     </div>
     <div class="col-md-4">
-      <a href="#" class="btn btn-lg btn-block"><i class="fa fa-2x fa-heart"></i><br/>Donate Now!</a>
+      <a href="http://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6EVVTYYK264C" class="btn btn-lg btn-block"><i class="fa fa-2x fa-heart"></i><br/>Donate Now!</a>
     </div>
   </div>
 </div>

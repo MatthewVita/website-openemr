@@ -10,7 +10,7 @@ body {
   background: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.nowiki h1, .nowiki h2, .nowiki h3, .nowiki h4, .nowiki h5, .nowiki h6 {
   font-family: 'League Spartan';
 }
 
@@ -52,6 +52,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 /* --------------------------- */
 /* --- MEDIAWIKI OVERRIDES --- */
 /* --------------------------- */
@@ -67,46 +72,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   margin: auto;
   background: #ffffff;
-}
-
-.header {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-.portlet {
-  background: #ffffff;
-}
-
-.portlet h5 {
-  text-transform: capitalize;
-  font-size: 120%;
-}
-
-.pBody {
-  padding: 0px;
-  margin: 0px;
-  border: none;
-  background: none;
-  font-size: 14px;
-}
-
-#content {
-  border: none;
-}
-#content h1, #content h2, #content h3,
-#content h4, #content h5, #content h6 {
-  font-family: "Open Sans";
-  font-weight: 100;
-  font-size: 24px;
-}
-
-#bodyContent p {
-  font-size: 16px;
-}
-
-#p-cactions .pBody {
-
 }
 
 /* --------------------------- */
@@ -425,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-h3 {
+.nowiki h3 {
   color: rgba(255,255,255,0.75);
 }
 

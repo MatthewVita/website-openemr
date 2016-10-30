@@ -14,9 +14,9 @@
   <div class="container-fluid" style="background-image:url(wiki/skins/openemr/images/slide-1.jpg);background-color:rgba(0,0,0,0.5);background-size:cover;height:395px">
     <div class="container hero">
       <div class="col-xs-12 text-center" style="font-weight:400; color: #fff; font-size: 12pt;height:395px;padding-top:80px;">
-        <h4>Better&nbsp;software. Better&nbsp;outcomes. Better&nbsp;healthcare.</h4>
+        <h4 class="nowiki">Better&nbsp;software. Better&nbsp;outcomes. Better&nbsp;healthcare.</h4>
         <img src="wiki/skins/openemr/images/square.png" alt="" class="img-responsive center-block">
-        <h1 class="hidden"><span class="logo-open">open</span><span class="logo-emr">EMR</span></h1>
+        <h1 class="hidden nowiki"><span class="logo-open">open</span><span class="logo-emr">EMR</span></h1>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-12">
-            <h3 class="text-center" style="padding-bottom: 20px;"><small><em>Notable Users</em></small></h3>
+            <h3 class="text-center nowiki" style="padding-bottom: 20px;"><small><em>Notable Users</em></small></h3>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
 <div class="container donations-needed home">
   <div class="row">
     <div class="col-md-12">
-      <h3>Help needed!</h3>
+      <h3 class="nowiki">Help needed!</h3>
     </div>
   </div>
   <div class="row">
@@ -83,7 +83,7 @@
       <div class="">
         <div class="row title">
           <div class="col-md-12">
-            <h3>A Feature-Rich Solution</h3>
+            <h3 class="nowiki">A Feature-Rich Solution</h3>
           </div>
         </div>
         <div class="row bullets">
@@ -116,7 +116,7 @@
   <div class="container-fluid home what-is-openemr box-shadow">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h3>What is OpenEMR</h3>
+        <h3 class="nowiki">What is OpenEMR</h3>
       </div>
     </div>
     <div class="row">
@@ -133,7 +133,7 @@
       <div class="row">
         <div class="col-md-4 col-xs-12">
           <div class="panel panel-default">
-            <div class="panel-heading non-profit-backing"><h3 class="panel-title">Non-profit Backing</h3></div>
+            <div class="panel-heading non-profit-backing"><h3 class="panel-title nowiki">Non-profit Backing</h3></div>
             <img src="wiki/skins/openemr/images/give-heart.png" alt="" class="img-responsive center-block">
             <hr>
             <div class="panel-body">
@@ -146,7 +146,7 @@
         </div>
         <div class="col-md-4 col-xs-12">
           <div class="panel panel-default">
-            <div class="panel-heading open-source"><h3 class="panel-title">Open Source</h3></div>
+            <div class="panel-heading open-source"><h3 class="panel-title nowiki">Open Source</h3></div>
             <div class="panel-body">
               <img src="wiki/skins/openemr/images/osi.png" alt="" class="img-responsive center-block">
               <hr>
@@ -156,7 +156,7 @@
         </div>
         <div class="col-md-4 col-xs-12">
           <div class="panel panel-default">
-            <div class="panel-heading certifications"><h3 class="panel-title">MU2 Certification</h3></div>
+            <div class="panel-heading certifications"><h3 class="panel-title nowiki">MU2 Certification</h3></div>
             <div class="panel-body">
               <img src="wiki/skins/openemr/images/onc-cert.jpg" alt="" class="img-responsive center-block">
               <hr>

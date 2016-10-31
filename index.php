@@ -124,7 +124,7 @@
         <p>OpenEMR is the most popular open source electronic health records and medical practice management solution. <a href="/wiki/index.php/OpenEMR_Wiki_Home_Page#ONC_Ambulatory_EHR_Certification">ONC certified</a> with international usage, OpenEMR's goal is a superior alternative to its proprietary counterparts.</p>
       </div>
       <div class="col-md-3">
-        <p>With passionate volunteers and contributors, <a href="http://www.oemr.org/">OEMR 501(c)3</a> is dedicated to guarding OpenEMR's status as a free, open source software solution for medical practices with a commitment to openness, kindness and cooperation. </p>
+        <p>With passionate volunteers and contributors dedicated to guarding OpenEMR's status as a free, open source software solution for medical practices with a commitment to openness, kindness and cooperation. </p>
         </div>
       </div>
     </div>
@@ -137,7 +137,7 @@
             <img src="wiki/skins/openemr/images/give-heart.png" alt="" class="img-responsive center-block">
             <hr>
             <div class="panel-body">
-              <p>OEMR is a non-profit organization formed to ensure that all 
+              <p><a href="http://www.oemr.org/">OEMR</a> is a non-profit organization formed to ensure that all
               people have access to high-quality medical care through the donation
               of free, open source medical software and service relating to that
               software.</p>
@@ -161,7 +161,7 @@
               <img src="wiki/skins/openemr/images/onc-cert.jpg" alt="" class="img-responsive center-block">
               <hr>
               <p>OpenEMR is ONC Ambulatory EHR Certified. OpenEMR is poised to attain the ONC Meaningful Use Stage 2 certification.
-              </p>  
+              </p>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@
   </div>
   <div class="container">
     <div class="home">
-      
+
     </div>
   </div>
   <?php include( 'template/footer.html' );?>

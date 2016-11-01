@@ -139,8 +139,8 @@
             <div class="panel-body">
               <p><a href="http://www.oemr.org/">OEMR</a> is a non-profit organization formed to ensure that all
               people have access to high-quality medical care through the donation
-              of free, open source medical software and service relating to that
-              software.</p>
+              of free, open source medical software and service relating to that software.
+              </p>
             </div>
           </div>
         </div>
@@ -148,7 +148,7 @@
           <div class="panel panel-default">
             <div class="panel-heading open-source"><h3 class="panel-title nowiki">Open Source</h3></div>
             <div class="panel-body">
-              <img src="wiki/skins/openemr/images/osi.png" alt="" class="img-responsive center-block">
+              <a href="http://opensource.org/"><img src="wiki/skins/openemr/images/osi-certified.png" alt="" class="img-responsive center-block"></a>
               <hr>
               <p>Open source software has changed the world for the better. OpenEMR is a leader in healthcare open source software. Costly proprietary EMRs are no longer the only option. <a href="/wiki/index.php/FAQ#How_do_I_begin_to_volunteer_for_the_OpenEMR_project.3F">Learn how to start contributing today!</a></p>
             </div>

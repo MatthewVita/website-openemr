@@ -160,7 +160,7 @@
             <div class="panel-body">
               <img src="wiki/skins/openemr/images/onc-cert.jpg" alt="" class="img-responsive center-block">
               <hr>
-              <p>OpenEMR is ONC Ambulatory EHR Certified. OpenEMR is poised to attain the ONC Meaningful Use Stage 2 certification.
+              <p>OpenEMR is ONC Meaningful Use Stage 2 EHR Certified as an EHR Module. OpenEMR is poised to attain the Complete certification in the near future.
               </p>
             </div>
           </div>

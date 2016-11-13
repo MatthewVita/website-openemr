@@ -88,7 +88,7 @@
         </div>
         <div class="row bullets">
           <div class="col-md-12">
-            <p>Our vibrant community of volunteers and contributors have maintained critical OpenEMR features for over a decade. With over <a href="/wiki/index.php/OpenEMR_Features#Multilanguage_Support">30 supported languages</a>, many customizations, and full data ownership, OpenEMR features shine. On top of this, users in need of support can take advantage of our <a href="https://sourceforge.net/p/openemr/discussion/202505/">volunteer support network</a> as well as over <a href="/wiki/index.php/OpenEMR_Professional_Support">30 vendors in over 10 countries.</a></p>
+            <p>Our vibrant community of volunteers and contributors have maintained critical OpenEMR features for over a decade. With over <a class="underline" href="/wiki/index.php/OpenEMR_Features#Multilanguage_Support">30 supported languages</a>, many customizations, and full data ownership, OpenEMR features shine. On top of this, users in need of support can take advantage of our <a class="underline" href="https://sourceforge.net/p/openemr/discussion/202505/">volunteer support network</a> as well as over <a class="underline" href="/wiki/index.php/OpenEMR_Professional_Support">30 vendors in over 10 countries.</a></p>
           </p>
           </div>
           <div class="col-sm-6">
